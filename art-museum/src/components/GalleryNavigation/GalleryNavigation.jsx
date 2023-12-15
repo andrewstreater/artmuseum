@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import './GalleryNavigation.css'
 
 export default function GalleryNavigation({galleries}) {
+    console.log(galleries[0])
   return (
     <div>
         <h2>Galleries</h2>

@@ -1,6 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import GalleryNavigation from './components/GalleryNavigation';
+import harvardArt from './data/harvardArt'
 
 const router = createBrowserRouter([
+  {
+    path: 'galleries',
+    element: <GalleryNavigation galleries={harvardArt.records}/>
+  },
 {
   path:'/',
   element:
@@ -16,7 +22,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return(
+  <div>
+    <RouterProvider router={router} />
+  </div>
+  )
+
 }
 
 export default App;
